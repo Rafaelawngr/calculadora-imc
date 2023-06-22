@@ -1,13 +1,14 @@
-
-function calcularIMC () {
+function calcularIMC() {
   let altura = Number(document.querySelector("input#altura").value);
   let peso = Number(document.querySelector("input#peso").value);
   let resposta = document.querySelector("#valor");
 
-  let imc = ( peso / altura**2).toFixed(2)
+  let imc = (peso / altura ** 2).toFixed(2);
   let valorImc = "";
 
-// colocar um if com verificação de erros
+  if (altura === 0 || isNaN(altura)) {
+    alert("Você digitou um valor inválido, tente novamente");
+  }
 
   if (imc < 18.5) {
     valorImc = `Você está abaixo do peso.`;
@@ -24,8 +25,7 @@ function calcularIMC () {
   }
 
   resposta.textContent = `Seu IMC é ${imc} - ${valorImc}`;
-};
-
+}
 
 // teste botão range para o input de peso:
 
