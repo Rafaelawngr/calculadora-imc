@@ -1,28 +1,29 @@
-let altura = document.querySelector("input#altura");
-let peso = document.querySelector("input#peso");
-let resposta = document.querySelector("#valor");
 
 function calcularIMC () {
-  let peson = Number(peso.value);
-  let alturan = Number(altura.value);
-  let imc = ( peson / alturan**2).toFixed(2)
+  let altura = Number(document.querySelector("input#altura").value);
+  let peso = Number(document.querySelector("input#peso").value);
+  let resposta = document.querySelector("#valor");
+
+  let imc = ( peso / altura**2).toFixed(2)
   let valorImc = "";
 
+// colocar um if com verificação de erros
+
   if (imc < 18.5) {
-    valorImc = `Seu IMC é ${imc} - Você está abaixo do peso.`;
+    valorImc = `Você está abaixo do peso.`;
   } else if (imc <= 25) {
-    valorImc = `Seu IMC é ${imc} - Você está com o peso normal.`;
+    valorImc = `Você está com o peso normal.`;
   } else if (imc <= 30) {
-    valorImc = `Seu IMC é ${imc} - Você está com sobrepeso.`;
+    valorImc = `Você está com sobrepeso.`;
   } else if (imc <= 35) {
-    valorImc = `Seu IMC é ${imc} - Você está com obesidade grau I.`;
+    valorImc = `Você está com obesidade grau I.`;
   } else if (imc <= 40) {
-    valorImc = `Seu IMC é ${imc} - Você está com obesidade grau III.`;
+    valorImc = `Você está com obesidade grau III.`;
   } else {
-    valorImc = `Seu IMC é ${imc} - Você está com obesidade grau III.`;
+    valorImc = `Você está com obesidade grau III.`;
   }
 
-  resposta.textContent = valorImc;
+  resposta.textContent = `Seu IMC é ${imc} - ${valorImc}`;
 };
 
 

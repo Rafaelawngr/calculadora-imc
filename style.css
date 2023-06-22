@@ -14,10 +14,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
 }
 
-section {
+main {
   background-color: #d8d6ef;
   border-radius: 15px;
   display: flex;
@@ -28,7 +27,7 @@ section {
   padding: 30px;
   width: 320px;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 h1 {
@@ -36,18 +35,17 @@ h1 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 10px;
-  align-items: center;
+  text-align: center
+;
 }
 
-.altura label,
-.peso label {
+label {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--TEXTCOLOR);
 }
 
-.altura input,
-.peso input {
+input {
   border-radius: 8px;
   border: none;
   display: flex;
@@ -55,7 +53,7 @@ h1 {
   justify-content: space-between;
   margin-top: 5px;
   padding: 0.75rem;
-  width: 65vw;
+  width: 100%;
 }
 
 input:focus {
@@ -72,7 +70,7 @@ input:focus {
   font-weight: 500;
   margin-top: 15px;
   padding: 10px;
-  width: 40vw;
+  width: 100%;
 }
 
 .btn:hover {
@@ -100,15 +98,11 @@ input:focus {
     font-size: 2.2rem;
   }
 
-  section {
+  main {
+    max-width: 600px;
     width: 50vw;
     padding: 30px;
     font-weight: 500;
-  }
-
-  .altura input,
-  .peso input {
-    width: 40vw;
   }
 
   .button {
@@ -116,6 +110,12 @@ input:focus {
   }
 
   .resultado {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 1.6rem;
   }
 }

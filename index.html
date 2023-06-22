@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <section>
+    <main>
         <h1>Calculadora de IMC</h1>
         <div class="altura">
             <label for="altura">Altura (m)</label>
@@ -27,12 +27,12 @@
         </div>
         <!-- <input type="range" min="0" max="350" id="peso" ondrag="rangeButton()"></div> -->
 
-        <button class="btn" id="calcularBtn" type="button" value="Calcular" onclick="calcularIMC()">Calcular</button>
+        <button class="btn" id="calcularBtn" type="button" onclick="calcularIMC()">Calcular</button>
 
         <div class="resultado">
             <span id="valor"></span>
         </div>
-    </section>
+    </main>
     <script src="script.js"></script>
 </body>
 
