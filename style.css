@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+:root {
+  --TEXTCOLOR: #292929;
+}
+
 body {
   background-color: #1c1c3a;
   display: flex;
@@ -28,17 +32,18 @@ section {
 }
 
 h1 {
-  color: #292929;
+  color: var(--TEXTCOLOR);
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 .altura label,
 .peso label {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #292929;
+  color: var(--TEXTCOLOR);
 }
 
 .altura input,
@@ -67,18 +72,15 @@ input:focus {
   font-weight: 500;
   margin-top: 15px;
   padding: 10px;
-  width: 65vw;
+  width: 40vw;
 }
 
 .btn:hover {
   background-color: #615b81;
 }
 
-.hidden {
-  display: none;
-}
-
 /* 
+ teste botão range para o input de peso:
 .peso input[type="range"],
 .peso input[type="button"] {
   flex: 1;
@@ -87,11 +89,13 @@ input:focus {
 .resultado {
   margin: auto;
   padding: 15px;
-  color: #292929;
-  font-size: 1.1rem;
+  color: var(--TEXTCOLOR);
+  font-size: 1.2rem;
+  font-weight: 500;
+  justify-content: center;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 500px) {
   h1 {
     font-size: 2.2rem;
   }
