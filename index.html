@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,25 +13,27 @@
     <title>Calculadora de IMC</title>
 </head>
 
-    <body>
-        <form>
+<body>
+    <section>
         <h1>Calculadora de IMC</h1>
-        <hr>
-            <div class="altura">
-            <label for="altura">Altura em cm</label>
-            <input type="number" id="altura"> </div>
-            
-            <div class="peso">
-            <label for="peso">Peso em kg</label>
-            <input type="number" id="peso"> </div>
-            <!-- <input type="range" min="0" max="350" id="peso" ondrag="rangeButton()"></div> -->
-            
-            <input class="button" type="button" value="Calcular" onclick="calcularIMC()">
-            <hr>
-            <span id="resposta"></span>
-            <hr>
-        </form>
-        <script src="script.js"  ></script>
-    </body>
+        <div class="altura">
+            <label for="altura">Altura (cm)</label>
+            <input type="number" id="altura">
+        </div>
+
+        <div class="peso">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso">
+        </div>
+        <!-- <input type="range" min="0" max="350" id="peso" ondrag="rangeButton()"></div> -->
+
+        <button class="btn" id="calcularBtn" type="button" value="Calcular" onclick="calcularIMC()">Calcular</button>
+
+        <div class="resultado hidden">
+            <span id="valor">Seu IMC é:</span>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
 
 </html>
